@@ -5,17 +5,22 @@ class Menu {
   constructor(food, price) {
     (this.food = food), (this.price = price);
   }
+  addToMenu() {
+    if (typeof this.food === 'string' && !isNaN(this.price)) {
+      console.log('Custom Food Added');
+      addFood.push({
+        name: this.food,
+        price: this.price,
+      });
+    } else {
+      console.log('might be WI');
+    }
+  }
   displayMenu() {
     return addFood;
   }
-  addToMenu() {
-    addFood.push({
-      name: this.food,
-      price: this.price,
-    });
-    return addFood;
-  }
 }
+
 
 //// Current Foods
 // Food1
@@ -31,11 +36,11 @@ food2.addToMenu()
 // Guideline
 console.log('::Guideline::'); 
 // Creating Food
-console.log("Custom Food==>", '\n' , "let foodx = new Menu('Food Name' , 'Price')");
+console.log("Custom Food==>", '\n' , "let foodx = new Menu('Food Name' , Price)");
 // Add Food To Menu
 console.log("Add Food To Menu==>", '\n' , "foodx.addToMenu()");
 // Display Menu
-console.log("Display Menu==>", '\n' ,'console.log(new Menu().displayMenu())');
+console.log("Display Menu==>", '\n' ,'new Menu().displayMenu()');
 
 
 
@@ -58,7 +63,7 @@ class OrderFood {
   }
   calc() {
     let foundUser = addFood.find(user => user.name === this.foodName);
-    let cost = this.foodAmount * foundUser.price
+    let cost = this.foodAmount * foundUser.price;
     return cost
   }
   factor() {
@@ -70,7 +75,7 @@ class OrderFood {
 
 // Samples
 let poo = new OrderFood('alireza', 'lazania', 7)
-// console.log(poo.factor());
+console.log(poo.factor());
 
 let meow4 = new OrderFood('dani', 'Pasta', 10)
 // console.log(meow4.factor());
