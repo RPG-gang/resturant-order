@@ -18,15 +18,12 @@ class Menu {
   }
 }
 
-let meow = new Menu('laz',200)
-console.log(meow.addToMenu());
+let food1 = new Menu('lazania',200)
+console.log(food1.addToMenu());
 
-let meow2 = new Menu('Pasta', 300)
-console.log(meow2.addToMenu());
+let food2 = new Menu('Pasta', 300)
+console.log(food2.addToMenu());
 
-
-// let foundUser = addFood.find(user => user.name === 'laz');
-// console.log(foundUser.price);
 
 
 
@@ -48,11 +45,20 @@ class OrderFood {
     return order;
   }
   calc() {
-    let foundUser = addFood.find(user => user.name === this.foodName);
-    let cost = this.foodAmount * foundUser.price
+    // let foundUser = addFood.find(user => user.name === this.foodName);
+    let cost = this.foodAmount * addFood.find(user => user.name === this.foodName).price
     return cost
   }
+  factor() {
+    let myFactor = this.fullName + "\n"  + this.foodAmount + ' x ' + this.foodName + "\n" + this.foodAmount * addFood.find(user => user.name === this.foodName).price + "T"
+    return myFactor
+  }
+
 }
 
-let meow3 = new OrderFood('alireza', 'laz', 7)
-console.log(meow3.calc());
+// Samples
+let poo = new OrderFood('alireza', 'lazania', 7)
+console.log(poo.factor());
+
+let meow4 = new OrderFood('dani', 'Pasta', 10)
+console.log(meow4.factor());
