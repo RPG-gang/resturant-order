@@ -24,5 +24,3 @@ class Menu {
 
 // let meow2 = new Menu('Pasta', 300)
 // console.log(meow2.addToMenu());
-
-
