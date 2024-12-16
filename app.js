@@ -25,6 +25,10 @@ let meow2 = new Menu('Pasta', 300)
 console.log(meow2.addToMenu());
 
 
+// let foundUser = addFood.find(user => user.name === 'laz');
+// console.log(foundUser.price);
+
+
 
 
 let order = []
@@ -44,7 +48,8 @@ class OrderFood {
     return order;
   }
   calc() {
-    let cost = this.foodAmount * Menu.apply(this.price);
+    let foundUser = addFood.find(user => user.name === this.foodName);
+    let cost = this.foodAmount * foundUser.price
     return cost
   }
 }
