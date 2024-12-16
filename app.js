@@ -44,11 +44,11 @@ console.log("Display Menu==>", "\n", "new Menu().displayMenu()");
 
 let order = [
   {
-    username: 'diddy',
-    foodName: 'opop',
+    username: "diddy",
+    foodName: "opop",
     foodAmount: 185,
-  }
-]
+  },
+];
 
 class OrderFood {
   constructor(fullName, foodName, foodAmount) {
@@ -65,46 +65,54 @@ class OrderFood {
     return order;
   }
   addOrder() {
-    if (order.find(user => user.username === this.fullName)) {
-      console.log('user already exists');
+    if (order.find((user) => user.username === this.fullName)) {
+      console.log("user already exists");
       order.push({
         foodName: this.foodName,
         foodAmount: this.foodAmount,
-      })
+      });
     } else {
-      console.log('new user');
+      console.log("new user");
     }
   }
   calc() {
-    let foundUser = addFood.find(user => user.name === this.foodName);
+    let foundUser = addFood.find((user) => user.name === this.foodName);
     let cost = this.foodAmount * foundUser.price;
-    return cost
+    return cost;
   }
   factor() {
-    let myFactor = "Mr/Ms " + this.fullName + "\n"  + "Food Order: " +this.foodAmount + ' x ' + this.foodName + "\n"+ "Total Cost: " + this.calc()  + "T" + "\n"  + "-Los Pollos Hermanos(Say My Name!..)"
-    return myFactor
+    let myFactor =
+      "Mr/Ms " +
+      this.fullName +
+      "\n" +
+      "Food Order: " +
+      this.foodAmount +
+      " x " +
+      this.foodName +
+      "\n" +
+      "Total Cost: " +
+      this.calc() +
+      "T" +
+      "\n" +
+      "-Los Pollos Hermanos(Say My Name!..)";
+    return myFactor;
   }
-  
 }
 
 // Samples
-let poo = new OrderFood('diddy', 'lazania', 7)
-poo.addOrder()
+let poo = new OrderFood("diddy", "lazania", 7);
+poo.addOrder();
 console.log(poo.factor());
 
 console.log(order);
 
-
-
-
 // let meow4 = new OrderFood('dani', 'Pasta', 10)
 // console.log(meow4.addOrder());
-
 
 // factor() {
 //   let myFactor = "Mr/Ms " + this.fullName + "\n"  + "Food Order: " +this.foodAmount + ' x ' + this.foodName + "\n"+ "Total Cost: " + this.calc()  + "T" + "\n"  + "-Los Pollos Hermanos(Say My Name!..)"
 //   return myFactor
-// }// }
+// }
 let audio = document.querySelector("#audio"),
   play = true;
 document.addEventListener("keydown", function (e) {
