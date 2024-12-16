@@ -1,3 +1,15 @@
+Conversation opened. 1 unread message.
+
+Skip to content
+Using Gmail with screen readers
+1 of 702
+(no subject)
+Inbox
+
+Alireza Noshad <iranexplosm@gmail.com>
+10:44 PM (4 minutes ago)
+to me
+
 "use strict";
 
 let addFood = [];
@@ -67,7 +79,7 @@ class OrderFood {
     return cost
   }
   factor() {
-    let myFactor = "Mr/Ms " + this.fullName + "\n"  + "Food Order: " +this.foodAmount + ' x ' + this.foodName + "\n"+ "Total Cost: " + this.calc()  + "T" + "\n"  + "-Los Pollos Hermanos(Say My Name!.)"
+    let myFactor = "Mr/Ms " + this.fullName + "\n"  + "Food Order: " +this.foodAmount + ' x ' + this.foodName + "\n"+ "Total Cost: " + this.calc()  + "T" + "\n"  + "-Los Pollos Hermanos(Say My Name!..)"
     return myFactor
   }
 
