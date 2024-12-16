@@ -1,4 +1,8 @@
-class menu {
+'use strict'
+
+
+let addFood = []
+class Menu {
   constructor(food, price) {
     (this.food = food), (this.price = price);
   }
@@ -7,10 +11,10 @@ class menu {
     return food;
   }
   addToMenu() {
-    let addFood = [{
+    addFood.push({
         name: this.food,
         price: this.price,
-    }];
+    })
     return addFood
   }
 }
