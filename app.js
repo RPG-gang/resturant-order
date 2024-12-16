@@ -17,10 +17,11 @@ class Menu {
   }
 }
 
-// Current Foods
+//// Current Foods
+// Food1
 let food1 = new Menu('lazania',200)
 food1.addToMenu()
-
+// Food2
 let food2 = new Menu('Pasta', 300)
 food2.addToMenu()
 
@@ -35,7 +36,6 @@ console.log("Custom Food==>", '\n' , "let foodx = new Menu('Food Name' , 'Price'
 console.log("Add Food To Menu==>", '\n' , "foodx.addToMenu()");
 // Display Menu
 console.log("Display Menu==>", '\n' ,'console.log(new Menu().displayMenu())');
-
 
 
 
@@ -62,7 +62,7 @@ class OrderFood {
     return cost
   }
   factor() {
-    let myFactor = this.fullName + "\n"  + this.foodAmount + ' x ' + this.foodName + "\n"+ "Total Cost" + this.calc()  + "T"
+    let myFactor = "Mr/Ms " + this.fullName + "\n"  + "Food Order: " +this.foodAmount + ' x ' + this.foodName + "\n"+ "Total Cost: " + this.calc()  + "T" + "\n"  + "-Los Pollos Hermanos(Say My Name!.)"
     return myFactor
   }
 
