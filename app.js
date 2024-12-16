@@ -30,9 +30,6 @@ food1.addToMenu()
 let food2 = new Menu('Pasta', 300)
 food2.addToMenu()
 
-
-
-
 // Guideline
 console.log('::Guideline::'); 
 // Creating Food
@@ -42,24 +39,38 @@ console.log("Add Food To Menu==>", '\n' , "foodx.addToMenu()");
 // Display Menu
 console.log("Display Menu==>", '\n' ,'new Menu().displayMenu()');
 
+let order = [
+  {
+    username: 'diddy',
+    foodName: 'opop',
+    foodAmount: 185,
+  }
+]
 
-
-
-let order = []
 class OrderFood {
   constructor(fullName, foodName, foodAmount) {
     (this.fullName = fullName),
       (this.foodName = foodName),
       (this.foodAmount = foodAmount);
   }
-  addOrder() {
+  OrderFunc() {
     order.push({
       username: this.fullName,
       foodName: this.foodName,
       foodAmount: this.foodAmount,
     });
-
     return order;
+  }
+  addOrder() {
+    if (order.find(user => user.username === this.fullName)) {
+      console.log('user already exists');
+      order.push({
+        foodName: this.foodName,
+        foodAmount: this.foodAmount,
+      })
+    } else {
+      console.log('new user');
+    }
   }
   calc() {
     let foundUser = addFood.find(user => user.name === this.foodName);
@@ -70,12 +81,24 @@ class OrderFood {
     let myFactor = "Mr/Ms " + this.fullName + "\n"  + "Food Order: " +this.foodAmount + ' x ' + this.foodName + "\n"+ "Total Cost: " + this.calc()  + "T" + "\n"  + "-Los Pollos Hermanos(Say My Name!..)"
     return myFactor
   }
-
+  
 }
 
 // Samples
-let poo = new OrderFood('alireza', 'lazania', 7)
+let poo = new OrderFood('diddy', 'lazania', 7)
+poo.addOrder()
 console.log(poo.factor());
 
-let meow4 = new OrderFood('dani', 'Pasta', 10)
-// console.log(meow4.factor());
+console.log(order);
+
+
+
+
+// let meow4 = new OrderFood('dani', 'Pasta', 10)
+// console.log(meow4.addOrder());
+
+
+// factor() {
+//   let myFactor = "Mr/Ms " + this.fullName + "\n"  + "Food Order: " +this.foodAmount + ' x ' + this.foodName + "\n"+ "Total Cost: " + this.calc()  + "T" + "\n"  + "-Los Pollos Hermanos(Say My Name!..)"
+//   return myFactor
+// }
