@@ -7,7 +7,7 @@ class Menu {
   }
   displayMenu() {
     let food = ["food:", this.food, "price:", this.price];
-    return food;
+    console.log(food);;
   }
   addToMenu() {
     addFood.push({
@@ -19,10 +19,14 @@ class Menu {
 }
 
 let food1 = new Menu('lazania',200)
-console.log(food1.addToMenu());
+food1.addToMenu()
 
 let food2 = new Menu('Pasta', 300)
-console.log(food2.addToMenu());
+food2.addToMenu()
+
+// console.log(addFood)
+food2.displayMenu()
+console.log(addFood);
 
 
 
@@ -45,12 +49,12 @@ class OrderFood {
     return order;
   }
   calc() {
-    // let foundUser = addFood.find(user => user.name === this.foodName);
-    let cost = this.foodAmount * addFood.find(user => user.name === this.foodName).price
+    let foundUser = addFood.find(user => user.name === this.foodName);
+    let cost = this.foodAmount * foundUser.price
     return cost
   }
   factor() {
-    let myFactor = this.fullName + "\n"  + this.foodAmount + ' x ' + this.foodName + "\n" + this.foodAmount * addFood.find(user => user.name === this.foodName).price + "T"
+    let myFactor = this.fullName + "\n"  + this.foodAmount + ' x ' + this.foodName + "\n"+ "Total Cost" + this.calc()  + "T"
     return myFactor
   }
 
