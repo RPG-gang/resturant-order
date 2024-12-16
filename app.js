@@ -6,8 +6,8 @@ class Menu {
     (this.food = food), (this.price = price);
   }
   displayMenu() {
-    let food = ["food:", this.food, "price:", this.price];
-    console.log(food);;
+    let fooded = addFood;
+    return fooded;
   }
   addToMenu() {
     addFood.push({
@@ -18,15 +18,24 @@ class Menu {
   }
 }
 
+// Current Foods
 let food1 = new Menu('lazania',200)
 food1.addToMenu()
 
 let food2 = new Menu('Pasta', 300)
 food2.addToMenu()
 
-// console.log(addFood)
-food2.displayMenu()
-console.log(addFood);
+//// Guideline
+// Creating Food
+console.log("Creating Food==>", '\n' , "let foodx = new Menu('Food Name' , 'Price')"
+);
+
+
+
+// Menu Display
+// console.log(new Menu().displayMenu());
+
+
 
 
 
@@ -62,7 +71,7 @@ class OrderFood {
 
 // Samples
 let poo = new OrderFood('alireza', 'lazania', 7)
-console.log(poo.factor());
+// console.log(poo.factor());
 
 let meow4 = new OrderFood('dani', 'Pasta', 10)
-console.log(meow4.factor());
+// console.log(meow4.factor());
