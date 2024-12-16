@@ -6,8 +6,7 @@ class Menu {
     (this.food = food), (this.price = price);
   }
   displayMenu() {
-    let fooded = addFood;
-    return fooded;
+    return addFood;
   }
   addToMenu() {
     addFood.push({
@@ -25,17 +24,17 @@ food1.addToMenu()
 let food2 = new Menu('Pasta', 300)
 food2.addToMenu()
 
-//// Guideline
+
+
+
+// Guideline
+console.log('::Guideline::'); 
 // Creating Food
-console.log("Creating Food==>", '\n' , "let foodx = new Menu('Food Name' , 'Price')"
-);
-
-
-
-// Menu Display
-// console.log(new Menu().displayMenu());
-
-
+console.log("Custom Food==>", '\n' , "let foodx = new Menu('Food Name' , 'Price')");
+// Add Food To Menu
+console.log("Add Food To Menu==>", '\n' , "foodx.addToMenu()");
+// Display Menu
+console.log("Display Menu==>", '\n' ,'console.log(new Menu().displayMenu())');
 
 
 
