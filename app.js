@@ -6,14 +6,14 @@ class Menu {
     (this.food = food), (this.price = price);
   }
   addToMenu() {
-    if (typeof this.food === 'string' && !isNaN(this.price)) {
-      console.log('Custom Food Added');
+    if (typeof this.food === "string" && !isNaN(this.price)) {
+      console.log("Custom Food Added");
       addFood.push({
         name: this.food,
         price: this.price,
       });
     } else {
-      console.log('might be WI');
+      console.log("might be WI");
     }
   }
   displayMenu() {
@@ -21,23 +21,26 @@ class Menu {
   }
 }
 
-
 //// Current Foods
 // Food1
-let food1 = new Menu('lazania',200)
-food1.addToMenu()
+let food1 = new Menu("lazania", 200);
+food1.addToMenu();
 // Food2
-let food2 = new Menu('Pasta', 300)
-food2.addToMenu()
+let food2 = new Menu("Pasta", 300);
+food2.addToMenu();
 
 // Guideline
-console.log('::Guideline::'); 
+console.log("::Guideline::");
 // Creating Food
-console.log("Custom Food==>", '\n' , "let foodx = new Menu('Food Name' , Price)");
+console.log(
+  "Custom Food==>",
+  "\n",
+  "let foodx = new Menu('Food Name' , Price)"
+);
 // Add Food To Menu
-console.log("Add Food To Menu==>", '\n' , "foodx.addToMenu()");
+console.log("Add Food To Menu==>", "\n", "foodx.addToMenu()");
 // Display Menu
-console.log("Display Menu==>", '\n' ,'new Menu().displayMenu()');
+console.log("Display Menu==>", "\n", "new Menu().displayMenu()");
 
 let order = [
   {
@@ -101,4 +104,17 @@ console.log(order);
 // factor() {
 //   let myFactor = "Mr/Ms " + this.fullName + "\n"  + "Food Order: " +this.foodAmount + ' x ' + this.foodName + "\n"+ "Total Cost: " + this.calc()  + "T" + "\n"  + "-Los Pollos Hermanos(Say My Name!..)"
 //   return myFactor
-// }
+// }// }
+let audio = document.querySelector("#audio"),
+  play = true;
+document.addEventListener("keydown", function (e) {
+  if (e.keyCode == 32) {
+    if (play) {
+      audio.pause();
+      play = false;
+    } else {
+      audio.play();
+      play = true;
+    }
+  }
+});
