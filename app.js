@@ -1,15 +1,3 @@
-Conversation opened. 1 unread message.
-
-Skip to content
-Using Gmail with screen readers
-1 of 702
-(no subject)
-Inbox
-
-Alireza Noshad <iranexplosm@gmail.com>
-10:44 PM (4 minutes ago)
-to me
-
 "use strict";
 
 let addFood = [];
