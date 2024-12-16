@@ -18,12 +18,16 @@ class Menu {
   }
 }
 
-// let meow = new Menu('laz',200)
-// console.log(meow.addToMenu());
+let meow = new Menu('laz',200)
+console.log(meow.addToMenu());
 
-// let meow2 = new Menu('Pasta', 300)
-// console.log(meow2.addToMenu());
+let meow2 = new Menu('Pasta', 300)
+console.log(meow2.addToMenu());
 
+
+
+
+let order = []
 class OrderFood {
   constructor(fullName, foodName, foodAmount) {
     (this.fullName = fullName),
@@ -31,17 +35,19 @@ class OrderFood {
       (this.foodAmount = foodAmount);
   }
   addOrder() {
-    let order = [
-      "userName:",
-      this.fullName,
-      "foodName:",
-      this.foodName,
-      "foodAmount:",
-      this.foodAmount,
-    ];
+    order.push({
+      username: this.fullName,
+      foodName: this.foodName,
+      foodAmount: this.foodAmount,
+    });
+
     return order;
   }
   calc() {
     let cost = this.foodAmount * Menu.apply(this.price);
+    return cost
   }
 }
+
+let meow3 = new OrderFood('alireza', 'laz', 7)
+console.log(meow3.calc());
