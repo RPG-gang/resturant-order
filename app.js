@@ -1,6 +1,5 @@
 'use strict'
 
-
 let addFood = []
 class Menu {
   constructor(food, price) {
@@ -18,3 +17,12 @@ class Menu {
     return addFood
   }
 }
+
+// let meow = new Menu('laz',200)
+// console.log(meow.addToMenu());
+
+
+// let meow2 = new Menu('Pasta', 300)
+// console.log(meow2.addToMenu());
+
+
